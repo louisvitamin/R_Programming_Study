@@ -417,3 +417,16 @@ for(i in 1:125){
   print(money) 
 }  
 money  #111047.2 in return
+
+
+diceVS <- function(n){
+  d2 <- sample(1:6, n, replace = T)
+  d3<- sample(1:6, n, replace = T)
+  count = 0
+  for(i in 1:length(d2)){
+    if(d2[i] > d3[i]){
+      count = count + 1
+    }  
+  }
+  return(prob = count/n)
+}
